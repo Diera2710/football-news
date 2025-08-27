@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1",'dibrienna-rauseuky-footballnews.pbp.cs.ui.ac.id' ]
 
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 
