@@ -108,6 +108,10 @@ else:
     }
 
 
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "dibrienna.rauseuky-footballnews.pbp.cs.ui.ac.id"]
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
