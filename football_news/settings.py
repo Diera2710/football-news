@@ -20,6 +20,10 @@ load_dotenv()
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1",'dibrienna-rauseuky-footballnews.pbp.cs.ui.ac.id' ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://dibrienna-rauseuky-footballnews.pbp.cs.ui.ac.id"
+]
+
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -61,7 +65,7 @@ ROOT_URLCONF = 'football_news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], # Tambahkan konten baris ini
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
