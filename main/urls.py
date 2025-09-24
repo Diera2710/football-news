@@ -1,3 +1,5 @@
+from main.views import delete_news
+from main.views import edit_news
 from django.urls import path
 from main.views import login_user
 from main.views import register
@@ -16,4 +18,6 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
+    path('news/<uuid:id>/edit', edit_news, name='edit_news'),
+    path('news/<uuid:id>/delete', delete_news, name='delete_news'),
 ]
